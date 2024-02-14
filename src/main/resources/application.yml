@@ -1,0 +1,28 @@
+server:
+  port : 8082
+spring:
+  application:
+    name: executorService
+  cloud:
+    discovery:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: book
+    password: 1234
+    driverClassName: org.h2.Driver
+  main:
+    allow-circular-references: true
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+
+    defer-datasource-initialization=true:
+
+eureka:
+  instance:
+    hostname: localhost
+
+
+
+
+
